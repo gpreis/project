@@ -25,9 +25,20 @@ gem 'puma', '~> 3.7'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+# Transform objects in JSON
+gem 'active_model_serializers'
+
+# Authentification gem
+gem 'devise_token_auth'
+
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry-rails'
+
+  # tests
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
+  gem 'factory_bot'
 end
 
 group :development do
@@ -35,6 +46,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # codestyle
+  gem 'rubocop', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
