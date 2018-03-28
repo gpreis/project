@@ -31,6 +31,9 @@ gem 'active_model_serializers'
 # Authentification gem
 gem 'devise_token_auth'
 
+# Pagination
+gem 'kaminari'
+
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'pry-rails'
@@ -38,7 +41,7 @@ group :development, :test do
   # tests
   gem 'rspec-rails'
   gem 'shoulda-matchers'
-  gem 'factory_bot'
+  gem 'factory_bot_rails'
 end
 
 group :development do

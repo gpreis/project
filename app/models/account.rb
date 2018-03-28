@@ -4,7 +4,7 @@ class Account < ApplicationRecord
          :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-  TYPES = %w(User Admin).freeze
+  TYPES = %w[User Admin].freeze
 
   validates :type,     presence: true, inclusion: { in: TYPES }
   validates :name,     presence: true
@@ -13,5 +13,5 @@ class Account < ApplicationRecord
   validates :provider, presence: true
 end
 
-class User < Account; end
-class Admin < Account; end
+User = Class.new(Account)
+Admin = Class.new(Account)
